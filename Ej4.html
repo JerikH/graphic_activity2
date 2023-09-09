@@ -1,0 +1,215 @@
+<!--Jerik David Hincapie Bedoya-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Cuestionario de Satisfacción de Producto</title>
+      <style>
+          body {
+              font-family: Arial, sans-serif;
+              background-color: #f5f5f5;
+              margin: 0;
+              padding: 20px;
+          }
+          .container {
+              max-width: 600px;
+              margin: 0 auto;
+              background-color: #ffffff;
+              padding: 20px;
+              border-radius: 5px;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          }
+          h1 {
+              text-align: center;
+              color: #333;
+          }
+          label {
+              display: block;
+              margin-top: 10px;
+              font-weight: bold;
+          }
+          input[type="text"],
+          input[type="number"],
+          select {
+              width: 100%;
+              padding: 10px;
+              margin-top: 5px;
+              border: 1px solid #ccc;
+              border-radius: 3px;
+          }
+          input[type="radio"] {
+              margin-right: 5px;
+          }
+          input[type="radio"]:last-child {
+              margin-right: 0;
+          }
+          .question {
+              margin-bottom: 20px;
+          }
+          .btn-submit {
+              display: block;
+              width: 100%;
+              padding: 10px;
+              background-color: #007bff;
+              color: #fff;
+              border: none;
+              border-radius: 3px;
+              cursor: pointer;
+          }
+      </style>
+  </head>
+  <body>
+      <div class="container">
+          <h1>Cuestionario de Satisfacción de Producto</h1>
+          <form>
+              <div class="question">
+                  <label for="motivo">1. ¿Cuál es el principal motivo por el que adquirió nuestro producto?</label>
+                  <input type="text" id="motivo" name="motivo" required>
+              </div>
+              <div class="question">
+                  <label for="mejoras">2. ¿Qué mejoras sugeriría para nuestro producto?</label>
+                  <textarea id="mejoras" name="mejoras" rows="4"></textarea>
+              </div>
+              <div class="question">
+                  <label for="experiencia">3. Describa una experiencia reciente en la que nuestro producto le haya resultado útil.</label>
+                  <textarea id="experiencia" name="experiencia" rows="4"></textarea>
+              </div>
+              <div class="question">
+                  <label for="impacto">4. ¿Cómo ha impactado nuestro producto en su vida o negocio?</label>
+                  <input type="text" id="impacto" name="impacto">
+              </div>
+              <div class="question">
+                  <label for="caracteristica">5. ¿Cuál es su característica favorita de nuestro producto y por qué?</label>
+                  <input type="text" id="caracteristica" name="caracteristica">
+              </div>
+              <div class="question">
+                  <label>6. ¿Ha experimentado algún problema con nuestro producto?</label>
+                  <input type="radio" name="problema" value="Sí"> Sí
+                  <input type="radio" name="problema" value="No"> No
+              </div>
+              <div class="question">
+                  <label>7. ¿Recomendaría nuestro producto a amigos o colegas?</label>
+                  <input type="radio" name="recomendar" value="Sí"> Sí
+                  <input type="radio" name="recomendar" value="No"> No
+              </div>
+              <div class="question">
+                  <label>8. ¿Ha comprado nuestro producto más de una vez?</label>
+                  <input type="radio" name="compra_mas" value="Sí"> Sí
+                  <input type="radio" name="compra_mas" value="No"> No
+              </div>
+              <div class="question">
+                  <label>9. ¿Ha obtenido el valor que esperaba de nuestro producto?</label>
+                  <input type="radio" name="valor" value="Sí"> Sí
+                  <input type="radio" name="valor" value="No"> No
+              </div>
+              <div class="question">
+                  <label>10. ¿Ha utilizado nuestro servicio de atención al cliente en el último año?</label>
+                  <input type="radio" name="atencion_cliente" value="Sí"> Sí
+                  <input type="radio" name="atencion_cliente" value="No"> No
+              </div>
+              <div class="question">
+                  <label for="satisfaccion_calidad">11. ¿En qué medida está satisfecho con la calidad de nuestro producto?</label>
+                  <select id="satisfaccion_calidad" name="satisfaccion_calidad">
+                      <option value="5">Muy satisfecho</option>
+                      <option value="4">Satisfecho</option>
+                      <option value="3">Neutral</option>
+                      <option value="2">Insatisfecho</option>
+                      <option value="1">Muy insatisfecho</option>
+                  </select>
+              </div>
+              <div class="question">
+                  <label for="facilidad_uso">12. ¿Qué tan fácil le resultó utilizar nuestro producto?</label>
+                  <select id="facilidad_uso" name="facilidad_uso">
+                      <option value="5">Muy fácil</option>
+                      <option value="4">Fácil</option>
+                      <option value="3">Neutral</option>
+                      <option value="2">Difícil</option>
+                      <option value="1">Muy difícil</option>
+                  </select>
+              </div>
+              <div class="question">
+                  <label for="aspecto_importante">13. ¿Cuál de los siguientes aspectos es más importante para usted al evaluar nuestro producto?</label>
+                  <select id="aspecto_importante" name="aspecto_importante">
+                      <option value="Precio">Precio</option>
+                      <option value="Calidad">Calidad</option>
+                      <option value="Servicio_cliente">Servicio al cliente</option>
+                      <option value="Funcionalidad">Funcionalidad</option>
+                      <option value="Diseño">Diseño</option>
+                  </select>
+              </div>
+              <div class="question">
+                  <label for="frecuencia_uso">14. ¿Con qué frecuencia utiliza nuestro producto?</label>
+                  <select id="frecuencia_uso" name="frecuencia_uso">
+                      <option value="Diariamente">Diariamente</option>
+                      <option value="Semanalmente">Semanalmente</option>
+                      <option value="Mensualmente">Mensualmente</option>
+                      <option value="Raramente">Raramente</option>
+                      <option value="Nunca">Nunca</option>
+                  </select>
+              </div>
+              <div class="question">
+                  <label for="conocio_producto">15. ¿Cómo conoció nuestro producto?</label>
+                  <select id="conocio_producto" name="conocio_producto">
+                      <option value="Recomendación_amigo">Recomendación de un amigo</option>
+                      <option value="Publicidad_en_linea">Publicidad en línea</option>
+                      <option value="Busqueda_en_linea">Búsqueda en línea</option>
+                      <option value="Redes_sociales">Redes sociales</option>
+                      <option value="Otro">Otro (por favor, especifique)</option>
+                  </select>
+              </div>
+              <div class="question">
+                  <label for="satisfaccion_general">16. En una escala del 1 al 5, ¿cómo calificaría su nivel de satisfacción general con nuestro producto?</label>
+                  <select id="satisfaccion_general" name="satisfaccion_general">
+                      <option value="1">1 (Muy insatisfecho)</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5 (Muy satisfecho)</option>
+                  </select>
+              </div>
+              <div class="question">
+                  <label for="compra_futura">17. ¿Cuán probable es que compre nuestro producto nuevamente en el futuro?</label>
+                  <select id="compra_futura" name="compra_futura">
+                      <option value="1">1 (Muy improbable)</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5 (Muy probable)</option>
+                  </select>
+              </div>
+              <div class="question">
+                  <label for="cumple_expectativas">18. ¿Cuál es su nivel de acuerdo con la afirmación: "Nuestro producto cumple con mis expectativas"?</label>
+                  <select id="cumple_expectativas" name="cumple_expectativas">
+                      <option value="1">1 (Totalmente en desacuerdo)</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5 (Totalmente de acuerdo)</option>
+                  </select>
+              </div>
+              <div class="question">
+                  <label for="satisfaccion_entrega">19. ¿Qué tan satisfecho está con la entrega y la disponibilidad de nuestro producto?</label>
+                  <select id="satisfaccion_entrega" name="satisfaccion_entrega">
+                      <option value="1">1 (Muy insatisfecho)</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5 (Muy satisfecho)</option>
+                  </select>
+              </div>
+              <div class="question">
+                  <label for="eficacia_producto">20. ¿Qué tan eficaz considera que es nuestro producto para resolver sus necesidades?</label>
+                  <select id="eficacia_producto" name="eficacia_producto">
+                      <option value="1">1 (Muy ineficaz)</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5 (Muy eficaz)</option>
+                  </select>
+              </div>
+              <button class="btn-submit" type="submit">Enviar Respuestas</button>
+          </form>
+      </div>
+  </body>
+</html>
